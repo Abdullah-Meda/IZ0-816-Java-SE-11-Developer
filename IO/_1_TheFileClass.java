@@ -33,7 +33,7 @@ public class _1_TheFileClass {
             File zooFile3 = new File("/home/tiger", "data/stripes.txt");
 
         /* java.io.File Methods - scroll to the bottom for a full summary */
-        var file = new File("C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_test.txt");
+        var file = new File("C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_read.txt");
         /* Add your custom file path here -------^^^ */
         System.out.println(file.exists());      // true in my case
         if (file.exists()) {
@@ -45,9 +45,9 @@ public class _1_TheFileClass {
                 /* length() */      System.out.println("File Size: " + file.length());
                 /* lastModified() */System.out.println("Last Modified: " + file.lastModified());
             } else {    // else it is a directory, so we list the files inside of it
-                /* listFiles */
+                /* listFiles() */
                 for (File subFile : file.listFiles()) {
-                    /* getName */   System.out.println("   " + subFile.getName());
+                    /* getName() */   System.out.println("   " + subFile.getName());
                 }
             }
         }
@@ -68,7 +68,7 @@ public class _1_TheFileClass {
     String getAbsolutePath()            Retrieves the absolute name of the file or directory
                                         within the file system
 
-    String getName()                     Retrieves the name of the file or directory.
+    String getName()                    Retrieves the name of the file or directory.
 
     String getParent()                  Retrieves the parent directory that the path is
                                         contained in or null if there is none
