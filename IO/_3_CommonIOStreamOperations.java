@@ -29,8 +29,8 @@ public class _3_CommonIOStreamOperations {
 
     public static void main(String[] args) {
 
-        var fileRead = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_read.txt";
-        var fileWrite = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_write.txt";
+        var fileRead  = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_3_read.txt";
+        var fileWrite = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_3_write.txt";
 
         try (var in = new FileInputStream(fileRead);
              var out = new FileOutputStream(fileWrite)) {
@@ -54,7 +54,7 @@ public class _3_CommonIOStreamOperations {
                                                                buffer array and not the characters in the file */
             out.write(arr2, 15, 10);
 
-            /* Current output in _0_write.txt: "This file is used by " */
+            /* Current output in _3_write.txt: "This file is used by " */
             /* Next 5 bytes to be written : "other" */
 
             /* boolean markSupported()
@@ -72,13 +72,13 @@ public class _3_CommonIOStreamOperations {
             out.write((char) in.read());        // writes "e"
             out.write((char) in.read());        // writes "r"
 
-            /* In my case, mark() wasn't supported, so "other" was written to the _0_write.txt. If markSupported()
+            /* In my case, mark() wasn't supported, so "other" was written to the _3_write.txt. If markSupported()
                did return true, then "otheher" would have been written */
 
             /* long skip(long n) */
             long noOfValuesSkipped = in.skip(6);    /* This line skips the next 6 bytes(characters) which
                                                           happen to be " class" */
 
-        } catch (IOException e) { e.printStackTrace(); }
+        } /* <--- close() since both extend AutoCloseable */ catch (IOException e) { e.printStackTrace(); }
     }
 }
