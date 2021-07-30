@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.Locale;
 
 public class _6_PrintingData {
 
@@ -13,7 +14,10 @@ public class _6_PrintingData {
        - Just remember that one operates on an OutputStream and the other a Writer
        - These two classes do not have corresponding input stream classes
        - Strangely, the PrintWriter class even has a constructor that takes an OutputStream as input
-      */
+     */
+
+    /* Remember, the methods of PrintStream do not throw any checked exceptions and rely on the checkError()
+    to report errors */
 
     public static void main(String[] args) {
 
@@ -23,7 +27,7 @@ public class _6_PrintingData {
                 out.write(String.valueOf(5));       // Writer Method
                 out.print(5);                       // PrintWriter Method
 
-                var a = new AClass();
+                var a = new TestClass();
                 out.write((a == null) ? "null" : a.toString());     // Writer Method
                 out.print(a);                                       // PrintWriter Method
 
@@ -47,6 +51,8 @@ public class _6_PrintingData {
                  -   %f        Applies to floating‐point values like float and double
                  -   %n        Inserts a line break using the system‐dependent lineseparator */
                 out.format("%s %n    Score: %2.3f out of %d", "James", 90.25, 100);
+                /* format() has an overloaded method that takes in a Locale */
+                out.format(new Locale("fr", "CA"), "Hello World");
                 /* format() does NOT insert a line break at the end */
         }
 
@@ -61,7 +67,7 @@ public class _6_PrintingData {
 
 }
 
-class AClass {
+class TestClass {
     private final String lang = "Java";
     private final int version = 11;
 
