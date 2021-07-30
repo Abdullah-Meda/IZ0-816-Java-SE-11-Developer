@@ -29,8 +29,8 @@ public class _3_CommonIOStreamOperations {
 
     public static void main(String[] args) {
 
-        var fileRead  = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_3_read.txt";
-        var fileWrite = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_3_write.txt";
+        var fileRead  = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_FilesToWriteTo\\_3_read.txt";
+        var fileWrite = "C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_FilesToWriteTo\\_3_write.txt";
 
         try (var in = new FileInputStream(fileRead);
              var out = new FileOutputStream(fileWrite)) {

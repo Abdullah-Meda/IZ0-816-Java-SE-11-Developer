@@ -73,11 +73,13 @@ public class _5_SerializingData {
         var gorillas = new ArrayList<Gorilla>();
         gorillas.add(new Gorilla("Grodd", 5, false));
         gorillas.add(new Gorilla("Ishmael", 8, true));
-        File dataFile = new File("C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_5_DataFile.txt");  // my path, you may change it to yours
+        File dataFile = new File("C:\\Users\\abdul_nr6ehsg\\IdeaProjects\\IZ0-816-Java-SE-11-Developer\\IO\\_0_FilesToWriteTo\\_5_DataFile.txt");  // my path, you may change it to yours
 
         saveToFile(gorillas, dataFile); // check _5_DataFile.txt in this package
         var gorillasFromFile = readFromFile(dataFile);
         System.out.println(gorillasFromFile);
     }
+
+    /* CONTINUED IN THE NEXT CLASS FILE */
 
 }
