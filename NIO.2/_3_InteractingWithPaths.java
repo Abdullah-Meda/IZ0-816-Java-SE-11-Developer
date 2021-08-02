@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -96,6 +97,45 @@ public class _3_InteractingWithPaths {
         var path5 = Path.of("friendly\\birds.txt");     // the file itself counts as one level
         System.out.println(path4.relativize(path5));    // ..\friendly\birds.txt
         System.out.println(path5.relativize(path4));    // ..\..\fish.txt
+
+        Path path6 = Paths.get("E:\\habitat");
+        Path path7 = Paths.get("E:\\sanctuary\\raven\\poe.txt");
+        System.out.println(path6.relativize(path7));    // ..\sanctuary\raven\poe.txt
+        System.out.println(path7.relativize(path6));    // ..\..\..\habitat
+            /*  - The relativize() method requires that both paths are absolute or both
+                  relative and throws an IllegalArgumentException if the types are mixed.
+                - On Windows‐based systems, it also requires that if absolute paths are used,
+                  then both paths must have the same root directory or drive letter. */
+
+
+
+        /* public Path normalize() */
+        var path8 = Path.of(".\\armadillo\\..\\shells.txt");
+        System.out.println(path8.normalize());                     // shells.txt
+        var path9 = Path.of("\\cats\\..\\panther\\food");
+        System.out.println(path9.normalize());                     // \panther\food
+        var path10 = Path.of("..\\..\\fish.txt");
+        System.out.println(path10.normalize());                     // ..\..\fish.txt
+
+        var path11 = Paths.get("/pony/../weather.txt");
+        var path12 = Paths.get("/weather.txt");
+        System.out.println(path11.equals(path12));                          // false
+        System.out.println(path11.normalize().equals(path12.normalize()));  // true
+        System.out.println(path11.normalize().equals(path12));              // true
+
+
+        /* public Path toRealPath(LinkOption… options) throws IOException
+             - This method is similar to normalize(), in that it eliminates any redundant path symbols
+             - It is also similar to toAbsolutePath(), in that it will join the path with the current working
+               directory if the path is relative
+             - toRealPath() will throw an exception if the path does not exist. In addition, it will follow
+               symbolic links, with an optional varargs parameter to ignore them */
+        try {
+            System.out.println(Path.of("C:\\Users\\abdul_nr6ehsg\\Desktop\\3.txt").toRealPath());
+
+            /* To gain access to the current working directory as a Path object */
+            System.out.println(Paths.get(".").toRealPath());
+        } catch (IOException e) { e.printStackTrace(); }
 
     }
 
