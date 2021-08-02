@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Concurrency" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/IO" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/NIO.2" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

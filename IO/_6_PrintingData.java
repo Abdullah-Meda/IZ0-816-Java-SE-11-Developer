@@ -60,7 +60,10 @@ public class _6_PrintingData {
         mentioned, there are exceptions. The InputStreamReader class wraps an InputStream with a
         Reader, while the OutputStreamWriter class wraps an OutputStream with a Writer. */
         try (Reader r = new InputStreamReader(System.in);
-             Writer w = new OutputStreamWriter(System.out)) {
+             Writer w = new OutputStreamWriter(new FileOutputStream("File name here"))) {
+
+            /* These are Reader/Writer classes, not Byte streams! */
+
         } catch (IOException e) { e.printStackTrace(); }
 
     }

@@ -1,0 +1,32 @@
+
+NOTES from Explanations of Answers to End of Chapter Questions:
+
+ -  The key here is that while Eagle is serializable, its parent class, Bird, is not. Therefore, none of the
+    members of Bird will be serialized. Even if you didn’t know that, you should know what happens on
+    deserialization. During deserialization, Java calls the constructor of the first nonserializable parent. In
+    this case, the Bird constructor is called, with name being set to Matt
+
+ -  For a class to be serialized, it must implement the Serializable interface and contain instance members that
+    are serializable or marked transient. Marking a class final does not impact its ability to be serialized
+
+ -  While it is a good practice for a serializable class to include a static serialVersionUID variable
+
+ -  Static members of the class are ignored on serialization
+
+ -  In Java, serialization is the process of turning an object to a stream, while deserialization is the process of
+    turning that stream back into an object
+
+ -  The Serializable interface is a marker interface that does not contain any abstract methods
+
+ -  The readObject() method of ObjectInputStream may throw a ClassNotFoundException even if the return object is not cast
+    to a specific type.
+
+ -  Paths that begin with the root directory are absolute paths
+
+ -  The delete() method returns false if the file or directory cannot be deleted.
+
+ -  The JVM creates one instance of the Console object as a singleton.  If the console is unavailable,
+    System.console() will return nul. Console can be used for both reading and writing data. The Console class
+    includes a format() method to write data to the output stream
+
+ -  The System class has three streams: in is for input, err is for error, and out is for output
