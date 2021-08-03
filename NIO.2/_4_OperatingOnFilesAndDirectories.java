@@ -37,11 +37,11 @@ public class _4_OperatingOnFilesAndDirectories {
              - Despite the name, the method can also be used to determine whether two Path objects refer to the same directory.
              - If the two path objects are equal, in terms of equals(), then the method will just return
                true without checking whether the file exists */
-//        try {
-//            System.out.println(Files.isSameFile(
-//                    Path.of("C:\\Documents\\java.txt"),
-//                    Path.of("C:\\Desktop\\java.txt") ));        // false
-//        } catch (IOException e) { e.printStackTrace(); }
+        try {
+            System.out.println(Files.isSameFile(
+                    Path.of("C:\\Documents\\java.txt"),
+                    Path.of("C:\\Desktop\\java.txt") ));        // false
+        } catch (IOException e) { e.printStackTrace(); }
 
 
 
