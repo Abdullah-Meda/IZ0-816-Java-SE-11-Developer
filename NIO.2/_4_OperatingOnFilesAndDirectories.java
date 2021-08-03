@@ -172,7 +172,7 @@ public class _4_OperatingOnFilesAndDirectories {
 
 
 
-                /* public static void delete(Path path) throws IOException
+        /* public static void delete(Path path) throws IOException
              - Throws an exception if the path does not exis
            public static boolean deleteIfExists(Path path) throws IOException
              - Returns true if the delete was successful, and false otherwise. Similar to createDirectories()
