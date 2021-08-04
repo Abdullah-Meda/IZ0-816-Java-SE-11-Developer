@@ -17,6 +17,7 @@ public class _4_OperatingOnFilesAndDirectories {
          a different name or list of parameters */
 
     /* HERE are some common methods applied to files and directories */
+    /* All of these methods except exists() declare IOException. */
 
     public static void main(String[] args) {
 
