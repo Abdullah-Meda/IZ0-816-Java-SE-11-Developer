@@ -95,8 +95,8 @@ public class _4_OperatingOnFilesAndDirectories {
 
             /* Copying files in to a directory
                  - Causes an exception to be thrown, such as the following:
-                        var file = Paths.get("C:\\Users\\abdul_nr6ehsg\\Desktop\\JavaTestFiles\\test.txt");
-                        var directory = Paths.get("C:\\Users\\abdul_nr6ehsg\\Desktop\\NewDir2");
+                        var file = Paths.get("D:\Java\\test.txt");
+                        var directory = Paths.get("D:\Java\\NewDir2");
                         Files.copy(file, directory);
                  - The following would be correct: */
             var file = Paths.get("D:\\Java\\test.txt");
@@ -174,7 +174,7 @@ public class _4_OperatingOnFilesAndDirectories {
 
 
         /* public static void delete(Path path) throws IOException
-             - Throws an exception if the path does not exis
+             - Throws an exception if the path does not exist
            public static boolean deleteIfExists(Path path) throws IOException
              - Returns true if the delete was successful, and false otherwise. Similar to createDirectories()
 

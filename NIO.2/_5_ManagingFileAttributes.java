@@ -6,8 +6,9 @@ import java.nio.file.Paths;
 public class _5_ManagingFileAttributes {
 
     /* - The Files class also provides numerous methods for accessing file and directory metadata, referred
-         to as file attributes. A file attribute is data about
-       - A file within the system, such as its size and visibility, that is not part of the file contents */
+         to as file attributes.
+       - A file attribute is data about a file within the system, such as its size and visibility, that is not part of
+         the file contents */
 
     public static void main(String[] args) {
 

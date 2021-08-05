@@ -58,7 +58,7 @@ public class _7_ApplyingFunctionalProgramming {
                 try (var s = Files.walk(source, FileVisitOption.FOLLOW_LINKS)) {...}
 
            - Make your the symbolic links do not create an endless cycle when using this option as a file or
-             dir may point to an ancestor directory. A path will be caused to be visited twice resulting in
+             dir may point to an ancestor directory. A path may be caused to be visited twice or more resulting in
              an exception being thrown
         */
 
