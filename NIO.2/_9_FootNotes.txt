@@ -1,0 +1,28 @@
+
+NOTES from Explanations of Answers to End of Chapter Questions:
+
+- Remember that most methods take in Paths as arguments rather than Strings.
+- Remember that most methods declare IOException
+
+- The method Files.isSameFile() first checks to see whether the Path values are the same in terms of equals().
+  Since the first path is relative and the second path is absolute, this comparison will return false, forcing
+  isSameFile() to check for the existence of both paths in the file system. Since we know /zoo/turkey does not
+  exist, a NoSuchFileException is thrown
+
+- First, the resolve() method does not normalize any path symbols
+- Second, calling resolve() with an absolute path as a parameter returns the absolute path
+
+- Files.lines() returns a Stream<String> and Files.readAllLines() returns a List<String>
+- Files.lines() processes each line via lazy evaluation, while Files.readAllLines() reads the entire file into
+  memory all at once. For this reason, Files.lines() works better on large files with limited memory available
+
+- Using a view to read multiple attributes leads to fewer round-trips between the process and the file system
+  and better performance
+- Finally, views can be used to access file system–specific attributes that are not available in Files methods
+
+- Files.walk() does not follow symbolic links by default
+
+- The normalize() method does not convert a relative path into an absolute path
+
+- The StandardOpenOption.APPEND option creates the file if it does not exist; otherwise, it starts writing from
+  the end of the file
