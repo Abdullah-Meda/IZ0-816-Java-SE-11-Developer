@@ -37,6 +37,8 @@ public class _3_ConnectingToDatabase {
                   System.out.println(conn);
               }
         */
+
+        conn.close();
     }
 
 }
