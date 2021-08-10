@@ -1,0 +1,31 @@
+
+NOTES from Explanations of Answers to End of Chapter Questions:
+
+- Before accessing data from a ResultSet, the cursor needs to be positioned. The call to rs.next() is compulsory!
+
+- In a ResultSet, columns are indexed starting with 1, not 0
+
+- The code compiles because PreparedStatement extends Statement and Statement allows passing a String in the
+  executeQuery() call. While PreparedStatement can have bind variables, Statement cannot. Since this code uses
+  executeQuery(sql) in Statement, it fails at runtime. A SQLException is thrown
+
+- JDBC code throws a SQLException, which is a checked exception. The code does not handle or declare this
+  exception, and therefore it doesn’t compile. Since the code doesn’t compile, option D is correct. If the
+  exception were handled or declared, the answer would be option C.
+
+- System.out.println(rs.getObject(1)); doesn't require a cast!
+
+- A JDBC URL has three parts. The first part is the string jdbc, making option C correct. The second part is the
+  subprotocol. This is the vendor/product name, which isn’t an answer choice. The subname is vendor-specific,
+  making option F correct as well.
+
+- Driver and PreparedStatement - the implementation of these interfaces is part of the database-specific driver
+  JAR file.
+
+- When setting parameters on a PreparedStatement, there are only options that take an index
+- The indexing starts with 1
+
+- A Connection is created using a static method on DriverManager
+
+- A JDBC URL has three main parts separated by single colons
+- The first part is always jdbc
