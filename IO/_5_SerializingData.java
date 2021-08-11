@@ -10,7 +10,7 @@ import java.util.List;
     /* To serialize an object using the I/O API, the object must implement the
        java.io.Serializable interface. The Serializable interface is a marker interface */
 
-/* Any field that is marked transient will NOT be saved to a stream when the class is serialized */
+    /* Any field that is marked transient will NOT be saved to a stream when the class is serialized */
 
     /* How to Make a Class Serializable:
          - The class must be marked Serializable.
