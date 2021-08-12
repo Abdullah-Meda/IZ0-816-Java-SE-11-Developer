@@ -1,0 +1,43 @@
+
+NOTES from Explanations of Answers to End of Chapter Questions:
+
+- A shallow copy does not create copies of the nested objects
+
+- Many programs use confidential information securely, making option A correct. After all, you wouldn’t be able
+  to bank online if programs couldn’t work with confidential information. It is also OK to put it in certain data
+  structures. A built-in Java API puts a password in a char[], making option C correct. Exposing the information
+  unintentionally is not OK, making option B incorrect. Sharing confidential information with others is definitely
+  not OK, making option D incorrect.
+
+- The clone() method is declared on the Object class. Option A is correct because it will always compile. However,
+  the call will throw an exception if the class that is being cloned does not implement Cloneable. Assuming this
+  interface is implemented, the default implementation creates a shallow copy, making option F correct. If the
+  class wants to implement a deep copy, it must override the clone() method with a custom implementation.
+
+- When a validation fails, the application should log a message or throw an exception, making options C and D
+  correct. It should not immediately terminate the program with System.exit() as that does not execute gracefully,
+  making option A incorrect. It also should not ignore the issue, making option B incorrect.
+
+- Billion laughs attack and Zip bomb are considered inclusion attacks
+
+- Since the class is final, it restricts extensibility, making option D correct. The private variable limits
+  accessibility, making option C correct. Finally, option A is correct. This is an immutable class since it’s not
+  possible to change the state after construction.
+
+- Any resource accessing things outside your program should be closed. Options C and D are correct because I/O and
+  JDBC meet this criteria.
+
+- The validation code checks that each character is between 0 and 9. Since it is comparing to allowed values,
+  this is an example of a whitelist, and option D is correct. If it were the opposite, it would be a blacklist.
+  There is no such thing as a gray or orange list.
+
+- The serialPersistentFields field is used to specify which fields should be used in serialization. It must be
+  declared private static final, or it will be ignored
+
+- Option A is incorrect because good encapsulation requires private state rather than declaring the class final.
+  Option B is incorrect because the well-encapsulated Camel class can have a getter that exposes the species
+  variable to be modified. Options C and D are incorrect because a class can be final while having public
+  variables and be mutable. Option E is correct because methods that expose species could change it, which would
+  prevent immutability. Option F is correct because you cannot enforce immutability in a subclass.
+
+- Reading an extremely large file is a form of a denial of service attack
