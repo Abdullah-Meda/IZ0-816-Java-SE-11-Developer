@@ -14,6 +14,4 @@ public class _5_ConstructingSensitiveObjects {
          - This technique requires static factory methods to obtain the object
          - The factory method technique gives you more control over the process of object creation. */
 
-
-
 }
