@@ -7,15 +7,17 @@ public class _4_SerializingAndDeserializingObjects {
     public static void main(String[] args) throws Exception {
 
         /* Customizing the Serialization process
-             - Look at Employee class
+             - Lines 48 - 94
              - The serialPersistentFields, readObject() and writeObject() allow custom members to be
                serialized regardless of transient keyword or being a static member */
 
         /* Pre/Post Serialization Processing
+             - Lines 98 - 108
              - Instead of a public constructor which may cause duplicate records, use a private constructor
                and a factory method where you check if the record is already available */
 
         /* Applying readResolve()
+             - Lines 112 - 124
              - When someone reads the data from the disk, it deserializes it into a new object, not the one in
                memory pool.
              - Enter the readResolve() method. When this method is present, it is run after the readObject()
@@ -26,6 +28,7 @@ public class _4_SerializingAndDeserializingObjects {
                (except static) for the readResolve() method including any access modifier */
 
         /* Applying writeReplace()
+             - Lines 128 - 131
              - Now, what if we want to write an Employee record to disk but we don't completely trust the
                instance we are holding
              - The writeReplace() method is run before writeObject() and allows us to replace the object that
